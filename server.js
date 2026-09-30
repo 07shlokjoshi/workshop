@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-// GET all products
+
 app.get("/products", (req, res) => {
   fs.readFile("./products.json", "utf8", (err, data) => {
     if (err) {
@@ -21,7 +21,7 @@ app.get("/products", (req, res) => {
 });
 
 
-// GET product by ID
+
 app.get("/products/:id", (req, res) => {
   fs.readFile("./products.json", "utf8", (err, data) => {
     if (err) {
@@ -47,7 +47,7 @@ app.get("/products/:id", (req, res) => {
 });
 
 
-// Start server
+
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
